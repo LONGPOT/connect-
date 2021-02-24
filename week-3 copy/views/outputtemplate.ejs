@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>The Data</title>
+        <link rel="stylesheet" href="./style.css">
+        <script type='javascript' src="script.js"></script>
+    </head>
+    <body>
+        <div class="one">
+        <h1>Ouput</h1>
+        <div id="time2"></div>
+        <% 
+            if (data.length > 0) {
+                for (var i = 0; i < data.length; i++) { 
+                    
+        %>             
+                    
+                    <!-- console.log(newDate); -->
+                    <div id="dataout<%= i %>" style="color: <%= data[i].color %>"><a href="/displayrecord?_id=<%= data[i]._id %>"><%= data[i].text %></a></div>
+                    <div class="time"></div>
+        <% 
+                    
+                    
+                    <!-- document.getElementById('time').innerHTML = newDate;    -->
+                } 
+            }
+        %>
+        
+        <script> var newDate = new Date(); 
+        var list = document.getElementsByClassName('time');
+        list[list.length-1].innerHTML = newDate;
+        // document.getElementsByClassName('time')[].innerHTML ; console.log(newDate) 
+        </script>
+
+        <form method="POST" action="/formdata">
+            <label for="data">Title</label>
+            <input type="text" name="data" value="Title">
+            <input type="color" name="color">
+            <textarea name="longtext" cols="80" rows="10"></textarea>
+            <input type="submit" name="submit" value="Submit">
+        </form>
+
+
+        </div>
+        
+    </body>
+</html>
