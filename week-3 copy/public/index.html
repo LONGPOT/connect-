@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Fun Form</title>
+        <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="one">
+            <form method="POST" action="/formdata">
+                <label for="data">Input</label>
+                <input type="text" name="data" value="Title">
+                <input type="color" name="color"> <br />
+                <textarea name="longtext" cols="80" rows="10">
+
+            </textarea>
+            <input type="submit" name="submit" value="Submit">
+            </form>
+        </div>
+        
+        <div class="two">
+            Search 
+            <form method="GET" action="/search">
+                <input type="text" name="q">
+                <input type="submit" value="Search now">
+            </form>
+        </div>
+    </body>
+
+</html>
